@@ -3,15 +3,38 @@
 <head>
 	<title>Guessing Game Fully Functional</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-	<h1>Guessing Game</h1>
-	<p>We will have a secret number, from 0  to 5. You'll have 3 guesses. If you successfully guess in fewer than 3 times, you win the game. Or else, you'll lose.</p>
-	<p>You'll have the option to restart the game at the end.</p>
-	<input type="number" name="userGuess" id='userGuess'>
-	<button id='guess' onclick='guess()'>Click to Guess</button>
-	<p>Message:</p><span id='message'></span>
+	<div class="container">
+  		<div class="jumbotron">
+			<h1>Guessing Game</h1>
+			
+			<p>We will have a secret number, from 1 to 10. You'll have 10 guesses. If you successfully guess in fewer than 10 times, you win the game. Or else, you'll lose.</p>
+			<p>You'll have the option to restart the game at the end.</p>
+			<p>Featured:</p>
+			<ul>
+				<li>After 10 clicks, the button will be disabled.</li>
+				<li>You can restart the game anytime, by clicking on the button "Restart The Game".</li>
+			</ul>
+		</div>
 
-<script src="script.js"></script>
+		<div class = 'jumbotron'>
+			<h2>The game</h2>
+			<input type='number' name="userGuess" placeholder="Insert Your Guess" id='userGuess'>
+			<button id='guess' onclick='guess()'>Click to Guess</button>
+			
+			<div>
+			<span>Message: </span> <span id='message'></span>
+			</div>
+			
+			<div>
+			<span>Your Past Guess:</span> <span id='pastGuess'></span>
+			</div>
+			<button id='reset' onclick='reset()'>Restart Game</button>
+		<div>
+	</div>
+
+<script src='script.js'></script>
 </body>
 </html>
